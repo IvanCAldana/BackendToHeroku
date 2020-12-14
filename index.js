@@ -48,7 +48,7 @@ app.use('/api',apiRouter);
 
 
 
-app.set('PORT',3000);//Fija el port al 3000.
+app.set('PORT',process.env.PORT||3000);//Fija el port al 3000 o el que asigne el sistema.
 
 //app.listen(3000);// servidor en local host escuchando en puerto 3000
 app.listen(app.get('PORT'),()=>{
